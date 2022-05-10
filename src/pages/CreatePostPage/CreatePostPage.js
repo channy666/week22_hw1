@@ -87,7 +87,7 @@ function CreatePostPage() {
     if (!user) {
       navigate("/");
     }
-  }, []);
+  }, [user]);
 
   const handleSubmitPost = () => {
     setErrorMessage(null);

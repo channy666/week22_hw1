@@ -154,7 +154,7 @@ function Header() {
   return (
     <HeaderContainer>
       <HeaderBanner>
-        <img src={HeaderLogo} />
+        <img src={HeaderLogo} alt="Logo" />
         <SearchBar>
           <Search />
           <SearchIcon>

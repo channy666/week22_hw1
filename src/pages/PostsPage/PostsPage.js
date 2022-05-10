@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { GeneralBlock, ErrorBlock } from "../../component/Blocks";
 import SideBar from "../../component/SideBar";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { getPosts, getAllPosts } from "../../WebAPI";
 import { Link } from "react-router-dom";
 import Paginator from "../../component/Paginator";

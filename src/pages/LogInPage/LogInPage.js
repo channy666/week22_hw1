@@ -155,7 +155,7 @@ function LogInPage() {
     if (user && user !== "comfirming") {
       navigate("/");
     }
-  }, []);
+  }, [user]);
 
   const handleModeChange = useCallback(
     (mode) => {
