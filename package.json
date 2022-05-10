@@ -1,5 +1,6 @@
 {
   "name": "week22_hw1",
+  "homepage": "https://channy666.github.io/week22_hw1",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,6 +10,7 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "dompurify": "^2.3.6",
+    "gh-pages": "^3.2.3",
     "html-react-parser": "^1.4.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -21,7 +23,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
