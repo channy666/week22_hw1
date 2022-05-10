@@ -1,24 +1,92 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./component/Header";
+import Footer from "./component/Footer";
+import HomePage from "./pages/HomePage";
+import PostsPage from "./pages/PostsPage";
+import PostPage from "./pages/PostPage";
+import AboutPage from "./pages/AboutPage";
+import ContactUsPage from "./pages/ContactUsPage";
+import CreatePostPage from "./pages/CreatePostPage";
+import LogInPage from "./pages/LogInPage";
+import { AuthContext } from "./context";
+import { useState, useEffect } from "react";
+import { getAuthToken, setAuthToken } from "./utils/authorization";
+import { getMe } from "./WebAPI";
+
+const Wrapper = styled.div`
+  min-height: 600px;
+  min-width: 1200px;
+`;
+
+const Warning = styled.div`
+  height: 35px;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  background: #c2c3de;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+`;
+
+const WarningLink = styled.a`
+  color: Crimson;
+
+  :hover {
+    color: #861587;
+  }
+`;
 
 function App() {
+  const [user, setUser] = useState("comfirming");
+
+  useEffect(() => {
+    if (getAuthToken()) {
+      getMe().then((res) => {
+        if (res.ok === 1) {
+          return setUser(res.data);
+        }
+        setUser(null);
+        setAuthToken(null);
+      });
+    } else {
+      setUser(null);
+    }
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthContext.Provider value={{ user, setUser }}>
+      <Wrapper>
+        <Router>
+          <Warning>
+            {`注意！本網站為練習用網站，欲前往清華大學區塊鏈法律與政策研究中心 `}
+            <WarningLink
+              href="https://www.facebook.com/BlockchainLawcenter/"
+              target="_blank"
+            >
+              請按此
+            </WarningLink>
+          </Warning>
+          <Header />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/About" element={<AboutPage />} />
+            <Route path="/Posts" element={<PostsPage />} />
+            <Route path="/Post/:id" element={<PostPage />} />
+            <Route path="/ContactUs" element={<ContactUsPage />} />
+            <Route path="/CreatePost" element={<CreatePostPage />} />
+            <Route path="/Login" element={<LogInPage />} />
+          </Routes>
+          <Footer />
+        </Router>
+      </Wrapper>
+    </AuthContext.Provider>
   );
 }
 
