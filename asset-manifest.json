@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/week22_hw1/static/css/main.e6c13ad2.css",
+    "main.js": "/week22_hw1/static/js/main.ad816a59.js",
+    "static/js/787.5d0220b7.chunk.js": "/week22_hw1/static/js/787.5d0220b7.chunk.js",
+    "static/media/臺師大和清大.jpeg": "/week22_hw1/static/media/臺師大和清大.70bcceb3eac9c85f6bef.jpeg",
+    "static/media/201904觀測月報封面.png": "/week22_hw1/static/media/201904觀測月報封面.2957e3ed79ff4772c260.png",
+    "static/media/區塊鏈技術與商機.jpeg": "/week22_hw1/static/media/區塊鏈技術與商機.eb1cae33c679ced3c1c6.jpeg",
+    "static/media/BlockTempo.jpg": "/week22_hw1/static/media/BlockTempo.62e56b33a54a9a2156f1.jpg",
+    "static/media/博士生論壇_自動化金融管制.jpeg": "/week22_hw1/static/media/博士生論壇_自動化金融管制.1845fcb93d61bf6ff50d.jpeg",
+    "static/media/BLPC_Logo_漸2.png": "/week22_hw1/static/media/BLPC_Logo_漸2.40c6f9465c3c8bd65db2.png",
+    "static/media/BLPC_Logo_white.png": "/week22_hw1/static/media/BLPC_Logo_white.4b4cb61ac1e1f2a5378d.png",
+    "static/media/featuredPage2.png": "/week22_hw1/static/media/featuredPage2.8ccf9f6933de83ef4aa1.png",
+    "static/media/featuredPage3.png": "/week22_hw1/static/media/featuredPage3.4c8ef2d46ac344f18724.png",
+    "static/media/blockchain_at_tsinghua.jpg": "/week22_hw1/static/media/blockchain_at_tsinghua.4c5866f5b27ed9d094e1.jpg",
+    "static/media/featuredPage4.png": "/week22_hw1/static/media/featuredPage4.8e0538a9926f0ca82283.png",
+    "static/media/featuredPageTest.png": "/week22_hw1/static/media/featuredPageTest.5593ad4bde3816e867c1.png",
+    "static/media/自比特幣技術書.jpeg": "/week22_hw1/static/media/自比特幣技術書.507956f350b728e555f9.jpeg",
+    "static/media/首頁banner_紫底空白.png": "/week22_hw1/static/media/首頁banner_紫底空白.3a87d6b8059e6ade58ce.png",
+    "static/media/博士生論壇_反洗錢.jpeg": "/week22_hw1/static/media/博士生論壇_反洗錢.50990a97e44edf5e52d5.jpeg",
+    "static/media/架構與功能圖示.png": "/week22_hw1/static/media/架構與功能圖示.c400e6acfe8b205d9fda.png",
+    "static/media/Flowchain.jpg": "/week22_hw1/static/media/Flowchain.80459277274f5be0c7a8.jpg",
+    "static/media/要聞共賞_永續發展.jpeg": "/week22_hw1/static/media/要聞共賞_永續發展.5dc87b707b6efc4bcbaa.jpeg",
+    "static/media/最新消息.png": "/week22_hw1/static/media/最新消息.4a683c0099af9413216b.png",
+    "static/media/果殼.png": "/week22_hw1/static/media/果殼.f1a656f8357ba534e4a2.png",
+    "index.html": "/week22_hw1/index.html",
+    "main.e6c13ad2.css.map": "/week22_hw1/static/css/main.e6c13ad2.css.map",
+    "main.ad816a59.js.map": "/week22_hw1/static/js/main.ad816a59.js.map",
+    "787.5d0220b7.chunk.js.map": "/week22_hw1/static/js/787.5d0220b7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.ad816a59.js"
+  ]
+}
