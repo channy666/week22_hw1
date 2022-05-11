@@ -100,7 +100,7 @@ function CreatePostPage() {
     createPost(title, editorDataRef.current.getData()).then((data) => {
       if (data.ok === 0) {
         setErrorMessage(data.message);
-        // `code: 1` 代表使用者沒有權限發文
+        // `code: 1` 代表使用者沒有發文權限
         if (data.code === 1) {
           setUser(null);
           navigate("/");

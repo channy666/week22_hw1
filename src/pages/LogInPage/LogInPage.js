@@ -84,7 +84,15 @@ const Username = styled.div`
 
 const Nickname = styled(Username)``;
 
-const Password = styled(Username)``;
+const Password = styled(Username)`
+  margin: 0px 0px 40px 18%;
+
+  ${(props) =>
+    props.$isLoginMode &&
+    `
+    margin: 45px 0px 55px 18%;
+  `}
+`;
 
 const TogglePassword = styled.div`
   cursor: pointer;
@@ -108,7 +116,7 @@ const Submit = styled.button`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  margin: 80px auto;
+  margin: 30px auto;
   font-size: 18px;
   letter-spacing: 12px;
   font-weight: bold;
@@ -125,6 +133,14 @@ const Error = styled.div`
   font-weight: bold;
   margin-left: 15%;
   font-size: 16px;
+  visibility: hidden;
+  height: 30px;
+
+  ${(props) =>
+    props.$hasError &&
+    `
+    visibility: visible;
+  `}
 `;
 
 const SuccessMessageContainer = styled(ContentContainer)``;
@@ -152,10 +168,14 @@ function LogInPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    console.log(successMessage);
+    if (successMessage) return;
     if (user && user !== "comfirming") {
+      console.log(successMessage);
       navigate("/");
     }
-  }, [user]);
+  }, [user, successMessage]);
+  // 其他加了 dependency 的頁面也要試試看
 
   const handleModeChange = useCallback(
     (mode) => {
@@ -210,8 +230,8 @@ function LogInPage() {
               setAuthToken(null);
               return;
             }
-            setUser(res.data);
             setSuccessMessage(true);
+            setUser(res.data);
           });
         })
         .catch(() => setErrorMessage("伺服器異常，請稍後再試"));
@@ -279,7 +299,7 @@ function LogInPage() {
                   {passwordShown ? "隱藏密碼" : "顯示密碼"}
                 </TogglePassword>
               </Password>
-              {errorMessage && <Error>{errorMessage}</Error>}
+              <Error $hasError={errorMessage}>{errorMessage}</Error>
               <Submit>{isRegisterMode ? "註冊" : "登入"}</Submit>
             </form>
           </ContentContainer>
