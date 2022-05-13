@@ -9,6 +9,7 @@ import AboutPage from "./pages/AboutPage";
 import ContactUsPage from "./pages/ContactUsPage";
 import CreatePostPage from "./pages/CreatePostPage";
 import LogInPage from "./pages/LogInPage";
+import NotFoundPage from "./pages/NotFoundPage";
 import { AuthContext } from "./context";
 import { useState, useEffect } from "react";
 import { getAuthToken, setAuthToken } from "./utils/authorization";
@@ -82,6 +83,7 @@ function App() {
             <Route path="/ContactUs" element={<ContactUsPage />} />
             <Route path="/CreatePost" element={<CreatePostPage />} />
             <Route path="/Login" element={<LogInPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
           <Footer />
         </Router>

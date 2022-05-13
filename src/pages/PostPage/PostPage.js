@@ -65,6 +65,7 @@ function PostPage() {
 
   useEffect(() => {
     setIsLoading(true);
+    setError(false);
     getPost(id)
       .then((data) => {
         // 找不到資料會回傳空物件
