@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/week22_hw1/static/css/main.e6c13ad2.css",
-    "main.js": "/week22_hw1/static/js/main.33889c55.js",
+    "main.js": "/week22_hw1/static/js/main.a5dcc6b9.js",
     "static/js/787.5d0220b7.chunk.js": "/week22_hw1/static/js/787.5d0220b7.chunk.js",
     "static/media/臺師大和清大.jpeg": "/week22_hw1/static/media/臺師大和清大.70bcceb3eac9c85f6bef.jpeg",
     "static/media/201904觀測月報封面.png": "/week22_hw1/static/media/201904觀測月報封面.2957e3ed79ff4772c260.png",
@@ -25,11 +25,11 @@
     "static/media/果殼.png": "/week22_hw1/static/media/果殼.f1a656f8357ba534e4a2.png",
     "index.html": "/week22_hw1/index.html",
     "main.e6c13ad2.css.map": "/week22_hw1/static/css/main.e6c13ad2.css.map",
-    "main.33889c55.js.map": "/week22_hw1/static/js/main.33889c55.js.map",
+    "main.a5dcc6b9.js.map": "/week22_hw1/static/js/main.a5dcc6b9.js.map",
     "787.5d0220b7.chunk.js.map": "/week22_hw1/static/js/787.5d0220b7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.33889c55.js"
+    "static/js/main.a5dcc6b9.js"
   ]
 }
